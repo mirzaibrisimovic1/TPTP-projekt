@@ -24,13 +24,13 @@
     all: unset;
     width: 60px; /* Probao sam 70, ali izgleda ruzno, morao sam smanjiti na 60, jedva namjestio */
     height: 35px;
-    background-color: #218274; /* Dan: tvoja zelena */
+    background-color: #218274; 
     border-radius: 50px;
     position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Razmiče ikone na krajeve */
+    justify-content: space-around;
     padding: 0 5px;
     transition: background-color 0.4s ease;
 }
@@ -42,19 +42,19 @@
     user-select: none;
 }
 
-/* Beli krug koji se pomera */
+/* Beli krug koji se pomijera */
 .ball {
     position: absolute;
     width: 27px;
     height: 27px;
     background-color: white;
     border-radius: 50%;
-    left: 4px; /* Početna pozicija (Lijevo - Dan) */
+    left: 4px;
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    z-index: 2; /* Iznad ikona */
+    z-index: 2;
 }
 
-/* DARK MODE PROMENE */
+/* DARK MODE PROMJENE */
 
 /* Pozadina dugmeta u dark modu */
 .dark #darkModeToggle {
@@ -74,7 +74,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: var(--bg);
     color: var(--text);
 }
@@ -82,11 +82,10 @@ body {
 /* HEADER NOVI, ONAJ MI SE NE SVIDJA NIKAKO */
 /* HERO KONTEJNER */
 .hero-container {
-    position: relative; /* Da bi overlay i sadržaj mogli da se pozicioniraju unutra */
+    position: relative; 
     width: 100%;
-    /* 100vh znači "view height" - zauzima 100% visine ekrana */
     height: 100vh; 
-    overflow: hidden; /* Sve što viri van ekrana se seče */
+    overflow: hidden;
 }
 
 /* VIDEO STIL */
@@ -94,14 +93,13 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    /* Centriranje i skaliranje videa da uvek pokrije kontejner, bez obzira na odnos strana */
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Ovo je najvažnije - video se ponaša kao background-image: cover */
-    z-index: 1; /* Video je najdublje */
+    object-fit: cover;
+    z-index: 1;
 }
 
 /* OVERLAY (POTAMNJIVANJE) */
@@ -111,29 +109,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Crna boja sa 50% prozirnosti (0.5). Podesi po želji */
     background: rgba(0, 0, 0, 0.7); 
-    z-index: 2; /* Iznad videa, ispod teksta */
+    z-index: 2;
 }
 
 /* SADRŽAJ (TEKST) */
 .hero-content {
     position: relative;
-    z-index: 3; /* Tekst je na vrhu */
+    z-index: 3; 
     height: 100%;
     display: flex;
-    justify-content: flex-start; /* Centriranje horizontalno */
-    align-items: center;    /* Centriranje vertikalno */
+    justify-content: flex-start;
+    align-items: center;
     text-align: left;
-    padding-left: 27%;          /* Ovo kontroliše koliko je tekst udaljen od leve ivice */
+    padding-left: 27%;
 }
 
 /* VELIKI NASLOV */
 .hero-content h1 {
     color: white;
-    font-size: 3rem; /* Početna velika slova */
+    font-size: 3rem; 
     font-weight: 700;
-    letter-spacing: 2px; /* Razmak između slova za moderniji izgled */
+    letter-spacing: 2px; 
     margin: 0;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
     text-transform: none;
@@ -142,7 +139,7 @@ body {
 /* PRILAGOĐAVANJE ZA MOBILNE (RESPONSIVENESS) */
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 2rem; /* Smanjujemo slova na manjim ekranima da se ne prelamaju ružno */
+        font-size: 2rem;
     }
 }
 
@@ -301,9 +298,9 @@ footer {
                 url('../images/ordinacija.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px; /* Možeš podesiti visinu po želji */
+    height: 300px;
     display: flex;
-    align-items: center; /* Centriranje elemenata vertikalno */
+    align-items: center;
     color: white;
 }
 
@@ -312,23 +309,148 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Razdvaja logo i ikone */
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo img {
-    height: 80px; /* Veličina logotipa */
+    height: 80px;
 }
 
 .social-icons a {
-    color: #00bcd4; /* Tirkizna boja sa slike */
+    color: #00bcd4;
     font-size: 24px;
     margin-left: 15px;
     text-decoration: none;
 }
 
 .social-icons a:hover {
-    color: white; /* Efekt kad se pređe mišem */
+    color: white;
+}
+
+
+/* Glavni kontejner sekcije */
+.dental-house-section {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.dc-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Stilovi za Header (Slika 1) */
+.dc-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.dc-logo-text {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.dc-logo-img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dc-main-title {
+    color: var(--text);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.dc-description {
+    max-width: 650px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.dc-description p {
+    margin-bottom: 15px;
+}
+
+/* Cik-cak linija (između sekcija) */
+.dc-zigzag {
+    height: 12px;
+    width: 100px;
+    margin: 40px auto;
+    background-image: linear-gradient(135deg, transparent 25%, var(--primary) 25%, var(--primary) 50%, transparent 50%, transparent 75%, var(--primary) 75%, var(--primary) 100%);
+    background-size: 10px 10px;
+}
+
+/* Grid sa karticama (Slika 2) */
+.dc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.dc-card {
+    background-color: var(--card-bg);
+    padding: 35px 15px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dc-card img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.dc-card h3 {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* HOVER EFEKAT - Promjena boje kartice i teksta */
+.dc-card:hover {
+    background-color: var(--primary);
+}
+
+.dc-card:hover h3 {
+    color: #ffffff;
+}
+
+/* PRILAGOĐAVANJE ZA MOBITELE (Responzivnost) */
+@media (max-width: 900px) {
+    .dc-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dc-main-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 500px) {
+    .dc-grid {
+        grid-template-columns: 1fr; /* 1 u redu na mobitelu */
+    }
 }
 
 
