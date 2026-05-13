@@ -462,3 +462,74 @@ footer {
 /* ============================================================================================ */
 /* ============================================================================================ */
 /* Mirza */
+.glavnisadrzaj-nav {
+
+    display: flex;
+
+    gap: 2rem;
+
+    align-items: center;
+
+}
+
+.navsadrzaj-item {
+
+    position: relative;
+
+}
+
+.dropdownsadrzaj-meni {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    background: white;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 6px;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+    min-width: 220px;
+
+    z-index: 100;
+
+    flex-direction: column;
+
+}
+
+.dropdownsadrzaj-meni a {
+
+    display: block;
+
+    padding: 0.65rem 1.2rem;
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: background 0.2s;
+
+}
+
+.dropdownsadrzaj-meni a:hover {
+
+    background: #f5f5f5;
+
+}
+
+/* Hover na nav-item pokazuje dropdown */
+
+.navsadrzaj-item:hover .dropdown-meni {
+
+    display: flex;
+
+}

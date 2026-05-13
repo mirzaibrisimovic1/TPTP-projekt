@@ -3,140 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usluge — DentaSmile Stomatološka ordinacija</title>
+    <title>Usluge — Dental centar Stomatološka ordinacija</title>
     <link rel="stylesheet" href="css/tptpstil.css">
 </head>
 <body>
 
+<header>
+    <div class="logo">
+        <h1>Dental Centar</h1>
+    </div>
 
-    <header>
-        <div class="header-inner">
-            <div class="logo">
-                <span class="logo-text">DentaSmile</span>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Početna</a></li>
-                    <li><a href="sadrzaj.html" class="active">Usluge</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="https://github.com/username/GrupaX-TPTP-2026" target="_blank" rel="noopener">GitHub</a></li>
-                </ul>
-            </nav>
-            <button id="temaToggle" class="tema-btn" aria-label="Promijeni temu">🌙</button>
-        </div>
-    </header>
-
-    <nav class="bookmark-nav" aria-label="Skočna navigacija po stranici">
-        <ul>
-            <li><a href="#pregled-zuba">Pregled zuba</a></li>
-            <li><a href="#kategorije">Kategorije usluga</a></li>
-            <li><a href="#cjenik">Cjenik</a></li>
-            <li><a href="#galerija">Galerija</a></li>
-            <li><a href="#tim">Naš tim</a></li>
-        </ul>
+    <nav class="main-nav">
+        <a href="index.html">Početna</a>
+        <a href="sadrzaj.html">Sadržaj</a>
+        <a href="kontakt.html">Kontakt</a>
     </nav>
+
+    <button id="darkModeToggle">
+    <span class="icon sun">☀️</span>
+    <span class="icon moon">🌙</span>
+    <div class="ball"></div>
+</button>
+</header>
 
     <div class="stranica-omotac sadrzaj-omotac">
 
-        <main>
-
-            <section id="pregled-zuba" class="usluga-hero">
-                <div class="usluga-hero-tekst">
-                    <span class="usluga-kategorija-tag">Pregledi</span>
-                    <h1>Pregled zuba</h1>
-                    <p>
-                        Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
-                        Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
-                        te daju personalizovane savjete za oralnu higijenu.
-                    </p>
-                    <p>
-                        Preporučujemo pregled najmanje <strong>dva puta godišnje</strong> — 
-                        prevencija je uvijek bolja i jeftinija od liječenja.
-                    </p>
-                    <a href="kontakt.html" class="btn-primarni">Zakaži pregled</a>
-                </div>
-                <div class="usluga-hero-slika">
-                    <picture>
-                        <source srcset="images/pregled-zuba.webp" type="image/webp">
-                        <img src="images/pregled-zuba.jpg" 
-                             alt="Stomatolog pregledava pacijentove zube uz upotrebu ogledala i sonde"
-                             width="500" height="380">
-                    </picture>
-                </div>
-            </section>
-
-            
+        <main>            
             <section id="kategorije" class="kategorije-sekcija">
-                <h2>Kategorije usluga</h2>
+                <h2>Naše usluge</h2>
                 <p>Pružamo širok spektar stomatoloških usluga podijeljenih u sljedeće kategorije:</p>
+           <ul class="ugnijezdena-lista">
+    <li id="pregled-dijagnostika">
+        <h3>Pregled i dijagnostika</h3>
+        <p>
+            Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
+            Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
+            te daju personalizovane savjete za oralnu higijenu.
+        </p>
+        <ul>
+            <li>Sistematski pregled zuba i desni</li>
+            <li>Digitalni rendgen (OPG panorama)</li>
+            <li>Procjena stanja temporomandibularnog zgloba</li>
+            <li>Screening oralne higijene</li>
+        </ul>
+    </li>
 
-                <ul class="ugnijezdena-lista">
-                    <li>
-                        <a href="pregled-dijagnostika.html" class="kategorija-link">Pregled i dijagnostika →</a>
-                        <ul>
-                            <li>Sistematski pregled zuba i desni</li>
-                            <li>Digitalni rendgen (OPG panorama)</li>
-                            <li>Procjena stanja temporomandibularnog zgloba</li>
-                            <li>Screening oralne higijene</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="izbjeljivanje-estetika.html" class="kategorija-link">Izbjeljivanje zubi i estetska stomatologija →</a>
-                        <ul>
-                            <li>Profesionalno in-office izbjeljivanje</li>
-                            <li>Home-bleaching set (kućni tretman)</li>
-                            <li>Bijele kompozitne plombe</li>
-                            <li>Estetske keramičke krunice</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="zubni-aparatici.html" class="kategorija-link">Zubni aparatići →</a>
-                        <ul>
-                            <li>Metalni fiksni aparatić</li>
-                            <li>Keramički (estetski) aparatić</li>
-                            <li>Invisalign prozirne udlage</li>
-                            <li>Retajneri za stabilizaciju rezultata</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="zubni-implantati.html" class="kategorija-link">Zubni implantati →</a>
-                        <ul>
-                            <li>Jednozubni titan implantat</li>
-                            <li>Implant-podržana mostna konstrukcija</li>
-                            <li>All-on-4 protokol (cijela vilica)</li>
-                            <li>Koštana augmentacija (nadogradnja kosti)</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="djecija-stomatologija.html" class="kategorija-link">Dječija stomatologija →</a>
-                        <ul>
-                            <li>Pregled i liječenje mliječnih zuba</li>
-                            <li>Zalivanje fisura (preventivna mjera)</li>
-                            <li>Fluoridacija zuba</li>
-                            <li>Dječji ortodontski tretmani</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="zubne-fasete.html" class="kategorija-link">Zubne fasete →</a>
-                        <ul>
-                            <li>Keramičke fasete (porculanske ljuske)</li>
-                            <li>Kompozitne fasete (direktna metoda)</li>
-                            <li>Minimalno invazivne ultra-tanke fasete</li>
-                            <li>Digitalno planiranje osmijeha (Smile Design)</li>
-                        </ul>
-                    </li>
-                </ul>
+    <li id="izbjeljivanje-estetika">
+        <h3>Izbjeljivanje zubi i estetska stomatologija</h3>
+        <p>
+            Postignite blistav osmijeh uz naše profesionalne tretmane izbjeljivanja i estetske korekcije.
+            Prilagođavamo svaki tretman individualnim potrebama i željama pacijenta,
+            koristeći najsigurnije i najefikasnije metode.
+        </p>
+        <ul>
+            <li>Profesionalno in-office izbjeljivanje</li>
+            <li>Home-bleaching set (kućni tretman)</li>
+            <li>Bijele kompozitne plombe</li>
+            <li>Estetske keramičke krunice</li>
+        </ul>
+    </li>
 
+    <li id="zubni-aparatici">
+        <h3>Zubni aparatići</h3>
+        <p>
+            Ispravna pozicija zuba važna je i za izgled i za zdravlje. Nudimo moderne ortodontske
+            aparatiće za sve uzraste, od klasičnih metalnih do gotovo nevidljivih prozirnih udlaga,
+            uz stalno praćenje i podršku tokom cijelog tretmana.
+        </p>
+        <ul>
+            <li>Metalni fiksni aparatić</li>
+            <li>Keramički (estetski) aparatić</li>
+            <li>Invisalign prozirne udlage</li>
+            <li>Retajneri za stabilizaciju rezultata</li>
+        </ul>
+    </li>
+
+    <li id="zubni-implantati">
+        <h3>Zubni implantati</h3>
+        <p>
+            Zubni implantati trajno su i najprirodnije rješenje za izgubljene zube.
+            Izrađeni od biokompatibilnog titana, integriraju se u kost i pružaju stabilnost
+            i estetiku jednaku prirodnom zubu — za cijeli život.
+        </p>
+        <ul>
+            <li>Jednozubni titan implantat</li>
+            <li>Implant-podržana mostna konstrukcija</li>
+            <li>All-on-4 protokol (cijela vilica)</li>
+            <li>Koštana augmentacija (nadogradnja kosti)</li>
+        </ul>
+    </li>
+
+    <li id="djecija-stomatologija">
+        <h3>Dječija stomatologija</h3>
+        <p>
+            Zdravi mliječni zubi osnova su pravilnog razvoja trajnih zuba. Naš tim pristupa
+            djeci strpljivo i pažljivo, u opuštenoj atmosferi, kako bi svaki posjet bio
+            pozitivno iskustvo koje gradi zdrave navike za cijeli život.
+        </p>
+        <ul>
+            <li>Pregled i liječenje mliječnih zuba</li>
+            <li>Zalivanje fisura (preventivna mjera)</li>
+            <li>Fluoridacija zuba</li>
+            <li>Dječji ortodontski tretmani</li>
+        </ul>
+    </li>
+
+    <li id="zubne-fasete">
+        <h3>Zubne fasete</h3>
+        <p>
+            Zubne fasete tanke su ljuske koje se postavljaju na prednju površinu zuba
+            i trenutno transformišu osmijeh. Idealne su za korekciju oblika, boje i
+            manjih nepravilnosti, uz minimalno brušenje prirodnog zuba.
+        </p>
+        <ul>
+            <li>Keramičke fasete (porculanske ljuske)</li>
+            <li>Kompozitne fasete (direktna metoda)</li>
+            <li>Minimalno invazivne ultra-tanke fasete</li>
+            <li>Digitalno planiranje osmijeha (Smile Design)</li>
+        </ul>
+    </li>
+</ul>
                 <a href="#vrh" class="skok-vrh-link">↑ Skoči na vrh</a>
             </section>
 
-            <section id="cjenik" class="cjenik-sekcija">
-                <h2>Cjenik usluga</h2>
+            <section id="cjenovnik" class="cjenovnik-sekcija">
+                <h2>Cjenovnik usluga</h2>
                 <p>Sve cijene su izražene u KM (konvertibilna marka) i uključuju PDV.</p>
 
                 <div class="tabela-omotac">
                     <table class="cjenik-tabela">
-                        <caption>Cjenik stomatoloških usluga ordinacije DentaSmile, Tuzla — 2026</caption>
+                        <caption>Cjenovnik stomatoloških usluga ordinacije Denta Centar, Tuzla — 2026</caption>
                         <thead>
                             <tr>
                                 <th scope="col">Usluga</th>
@@ -147,7 +143,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Sistematski pregled</td>
+                                <td>Pregled zuba</td>
                                 <td>Kompletan pregled zuba, desni i mekih tkiva</td>
                                 <td>30 min</td>
                                 <td>30 KM</td>
@@ -161,8 +157,8 @@
                             <tr>
                                 <td>Bijela plomba</td>
                                 <td>Kompozitna plomba boje zuba (po zubu)</td>
-                                <td>45–60 min</td>
-                                <td>80–120 KM</td>
+                                <td>45-60 min</td>
+                                <td>80-120 KM</td>
                             </tr>
                             <tr>
                                 <td>Izbjeljivanje zuba</td>
@@ -173,7 +169,7 @@
                             <tr>
                                 <td>Vađenje zuba</td>
                                 <td>Jednostavna ekstrakcija uz lokalnu anesteziju</td>
-                                <td>20–30 min</td>
+                                <td>20-30 min</td>
                                 <td>60 KM</td>
                             </tr>
                             <tr>
@@ -185,7 +181,7 @@
                             <tr>
                                 <td>Metalni aparatić</td>
                                 <td>Fiksni ortodontski aparat, postavljanje</td>
-                                <td>60–90 min</td>
+                                <td>60-90 min</td>
                                 <td>1.200 KM</td>
                             </tr>
                             <tr>
@@ -205,14 +201,11 @@
                             <tr>
                                 <td colspan="4">
                                     * Konačna cijena se utvrđuje nakon pregleda. Prihvatamo gotovinu i kartice.
-                                    Za penzionere i djecu do 15 god. popust 10%.
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-
-                <a href="#vrh" class="skok-vrh-link">↑ Skoči na vrh</a>
             </section>
 
             <section id="galerija" class="galerija-sekcija">
@@ -221,11 +214,10 @@
 
                 <div class="image-map-omotac">
                     <h3>Prostorije ordinacije</h3>
-                    <p>Kliknite na oznake na slici da saznate više o pojedinoj prostoriji:</p>
 
                     <img 
                         src="images/ordinacija-mapa.jpg" 
-                        alt="Tlocrt stomatološke ordinacije DentaSmile sa označenim prostorijama"
+                        alt="Tlocrt stomatološke ordinacije Denta Centar sa označenim prostorijama"
                         usemap="#ordinacija-mapa"
                         width="600" height="350"
                         id="ordinacijaSlika">
@@ -295,13 +287,13 @@
                     </figure>
                     <figure class="galerija-item">
                         <img src="images/djeca-ordinacija.jpg" 
-                             alt="Šarena dječja ordinacija sa crtićima na zidovima" 
+                             alt="Šarena diječja ordinacija sa crtićima na zidovima" 
                              loading="lazy">
-                        <figcaption>Dječja ordinacija</figcaption>
+                        <figcaption>Dječija ordinacija</figcaption>
                     </figure>
                     <figure class="galerija-item">
                         <img src="images/tim-foto.jpg" 
-                             alt="Tim DentaSmile ordinacije — tri doktora u bijelim mantilima, osmjehuju se" 
+                             alt="Tim DentaCentar ordinacije — tri doktora Dental Centra" 
                              loading="lazy">
                         <figcaption>Naš tim</figcaption>
                     </figure>
@@ -346,8 +338,6 @@
                         </div>
                     </article>
                 </div>
-
-                <a href="#vrh" class="skok-vrh-link">↑ Skoči na vrh</a>
             </section>
 
         </main>
@@ -355,22 +345,30 @@
         <aside>
 
             <!-- Sidebar navigacija po sekcijama stranice -->
-            <nav class="aside-nav" aria-label="Navigacija po stranici">
-                <h3>Na ovoj stranici</h3>
-                <ul>
-                    <li><a href="#pregled-zuba" class="aside-nav-link aktivan">Pregled zuba</a></li>
-                    <li><a href="#kategorije" class="aside-nav-link">Kategorije usluga</a></li>
-                    <li><a href="#cjenik" class="aside-nav-link">Cjenik</a></li>
-                    <li><a href="#galerija" class="aside-nav-link">Galerija</a></li>
-                    <li><a href="#tim" class="aside-nav-link">Naš tim</a></li>
-                </ul>
-            </nav>
+<nav class="glavnisadrzaj-nav">
+    <div class="navsadrzaj-item dropdown">
+        <a href="sadrzaj.html" class="nav-link">Kategorije usluga ▾</a>
+        <div class="dropdownsadrzaj-meni">
+            <a href="sadrzaj.html#pregled-dijagnostika">Pregled i dijagnostika</a>
+            <a href="sadrzaj.html#izbjeljivanje-estetika">Izbjeljivanje i estetika</a>
+            <a href="sadrzaj.html#zubni-aparatici">Zubni aparatići</a>
+            <a href="sadrzaj.html#zubni-implantati">Zubni implantati</a>
+            <a href="sadrzaj.html#djecija-stomatologija">Dječija stomatologija</a>
+            <a href="sadrzaj.html#zubne-fasete">Zubne fasete</a>
+        </div>
+    </div>
+
+    <a href="cjenovnik.html" class="navsadrzaj-link">Cjenovnik</a>
+    <a href="galerija.html" class="navsadrzaj-link">Galerija</a>
+    <a href="nas-tim.html" class="navsadrzaj-link">Naš tim</a>
+</nav>
+
 
             <div class="aside-blok">
                 <h3>Radno vrijeme</h3>
                 <ul class="radno-vrijeme">
-                    <li><span>Pon – Pet</span><span>08:00 – 20:00</span></li>
-                    <li><span>Subota</span><span>09:00 – 15:00</span></li>
+                    <li><span>Pon - Pet</span><span>08:00 - 20:00</span></li>
+                    <li><span>Subota</span><span>09:00 - 15:00</span></li>
                     <li><span>Nedjelja</span><span class="zatvoreno">Zatvoreno</span></li>
                 </ul>
                 <!-- JS će popuniti ovaj element live statusom ordinacije -->
@@ -383,24 +381,10 @@
 
     <a id="vrh" aria-hidden="true"></a>
 
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-info">
-                <p>&copy; 2026 DentaSmile — Sva prava zadržana</p>
-                <p>
-                    Autori:
-                    Ime Prezime 1 &nbsp;|&nbsp;
-                    Ime Prezime 2 &nbsp;|&nbsp;
-                    Ime Prezime 3
-                </p>
-            </div>
-            <div class="footer-linkovi">
-                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook stranica">Facebook</a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram profil">Instagram</a>
-                <a href="kontakt.html">Kontakt</a>
-            </div>
-        </div>
-    </footer>
+<footer>
+    <p>Mirza Alihodžić | Mirza Ibrišimović | Muhamed Duraković</p>
+    <p>© <a href="https://github.com/mirzaibrisimovic1/Grupa49-TPTP-2026">Grupa49_TPTP_2026</a></p>
+</footer>
 
     <script src="js/tptpskripte.js"></script>
 </body>
