@@ -462,74 +462,105 @@ footer {
 /* ============================================================================================ */
 /* ============================================================================================ */
 /* Mirza */
-.glavnisadrzaj-nav {
-
-    display: flex;
-
-    gap: 2rem;
-
-    align-items: center;
-
+.sidebar{
+height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #8fbaaa;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.navsadrzaj-item {
-
-    position: relative;
-
-}
-
-.dropdownsadrzaj-meni {
-
+.dropdown-kontent{
     display: none;
-
-    position: absolute;
-
-    top: 100%;
-
-    left: 0;
-
-    background: white;
-
-    border: 1px solid #e0e0e0;
-
-    border-radius: 6px;
-
-    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-
-    min-width: 220px;
-
-    z-index: 100;
-
-    flex-direction: column;
-
+    background-color: #8fbaaa;
+    color:#218274;
 }
 
-.dropdownsadrzaj-meni a {
-
-    display: block;
-
-    padding: 0.65rem 1.2rem;
-
-    color: #333;
-
+.sidebar a  .dropdown{
+    padding: 6px 8px 6px 16px;
     text-decoration: none;
-
-    font-size: 0.9rem;
-
-    transition: background 0.2s;
-
+    font-size: 20px;
+    color: #218274;
+    display: block;
+    border: none;
+    background: #8fbaaa;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+.sidebar a:hover  .dropdown:hover{
+    background-color: #70a894;
+    color: white;  
+}
+.dropdown :active {
+    background-color: #70a894;
+    color: white;
+    opacity: 0.5;
+}
+.pokazivac {
+    float: right;
+    padding-right: 8px;
 }
 
-.dropdownsadrzaj-meni a:hover {
-
-    background: #f5f5f5;
-
+/* Sa w3schools */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
-/* Hover na nav-item pokazuje dropdown */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-.navsadrzaj-item:hover .dropdown-meni {
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
 
+tr:hover {
+    background-color: aquamarine;
+}
+
+.Usluge-sekcija {
     display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 8rem;
+}
+
+.Usluge-tekst {
+    flex: 1;
+}
+
+.Usluge-tekst h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.Usluge-tekst p {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.Usluge-slika {
+    flex: 1;
+}
+
+.Usluge-slika img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.Usluge-slika{
 
 }

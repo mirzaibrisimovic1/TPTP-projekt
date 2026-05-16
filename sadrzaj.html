@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usluge — Dental centar Stomatološka ordinacija</title>
+    <title>Sadžaj</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <link rel="stylesheet" href="css/tptpstil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
@@ -23,30 +30,62 @@
     <span class="icon sun">☀️</span>
     <span class="icon moon">🌙</span>
     <div class="ball"></div>
-</button>
+    </button>
+    <!--
+<nav class="sidebar">
+        <a href="#Usluge">O nama</a>
+        <button class="dropdown">Sve usluge
+        <i class="pokazivac"></i>
+        </button>
+    <div class="dropdown-kontent">
+            <a href="#pregled-dijagnostika">Pregled i dijagnostika</a>
+            <a href="#izbjeljivanje-estetika">Izbjeljivanje i estetika</a>
+            <a href="#zubni-aparatici">Zubni aparatići</a>
+            <a href="#zubni-implantati">Zubni implantati</a>
+            <a href="#djecija-stomatologija">Dječija stomatologija</a>
+            <a href="#zubne-fasete">Zubne fasete</a>
+    </div>
+            <a href="#cjenovnik">Cjenovnik</a>
+            <a href="#galerija">Galerija</a>
+            <a href="#nas-tim">Naš tim</a>
+</nav>
+-->
+
 </header>
 
-    <div class="stranica-omotac sadrzaj-omotac">
 
-        <main>            
-            <section id="kategorije" class="kategorije-sekcija">
-                <h2>Naše usluge</h2>
-                <p>Pružamo širok spektar stomatoloških usluga podijeljenih u sljedeće kategorije:</p>
-           <ul class="ugnijezdena-lista">
-    <li id="pregled-dijagnostika">
-        <h3>Pregled i dijagnostika</h3>
-        <p>
-            Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
-            Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
-            te daju personalizovane savjete za oralnu higijenu.
-        </p>
-        <ul>
-            <li>Sistematski pregled zuba i desni</li>
-            <li>Digitalni rendgen (OPG panorama)</li>
-            <li>Procjena stanja temporomandibularnog zgloba</li>
-            <li>Screening oralne higijene</li>
-        </ul>
-    </li>
+    <main>           
+        <section id="Usluge" class="Usluge-sekcija">
+        <div class="Usluge-tekst"> 
+            <img src="logo.png"
+            <h3>O nama i našim uslugama</h3>
+            <p>Dental Centar dr. Butković iz Živinica pruža savremene stomatološke usluge uz profesionalan i individualan pristup svakom pacijentu. Ordinacija uspješno radi od 2022. godine, sa fokusom na kvalitet, sigurnost i ugodnu atmosferu.
+            Nalazimo se na adresi FM23+C6P, Živinice 75270, gdje uz modernu opremu i stručan tim brinemo o zdravlju i estetici vašeg osmijeha.
+            Pružamo širok spektar stomatoloških usluga </p>
+        </div>
+        <div class="Usluge-slika">
+            <img src="images/Usluge.jpg" alt="Doktor klinike">
+        </div>
+        </section>   
+    
+<!--Nase usluge + ugnjezdena lista-->
+
+        <div id="pregled-dijagnostika">
+            <h3>Pregled i dijagnostika</h3>
+            <p>
+                Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
+                Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
+                te daju personalizovane savjete za oralnu higijenu. 
+            </p>
+            <ul>
+                <li>Pregled ukljucuje:</li>
+                <li>Sistematski pregled zuba i desni</li>
+                <li>Digitalni rendgen (OPG panorama)</li>
+                <li>Procjena stanja temporomandibularnog zgloba</li>
+                <li>Screening oralne higijene</li>
+            </ul>
+        </div>
+
 
     <li id="izbjeljivanje-estetika">
         <h3>Izbjeljivanje zubi i estetska stomatologija</h3>
@@ -78,20 +117,32 @@
         </ul>
     </li>
 
-    <li id="zubni-implantati">
-        <h3>Zubni implantati</h3>
-        <p>
-            Zubni implantati trajno su i najprirodnije rješenje za izgubljene zube.
-            Izrađeni od biokompatibilnog titana, integriraju se u kost i pružaju stabilnost
-            i estetiku jednaku prirodnom zubu — za cijeli život.
-        </p>
-        <ul>
-            <li>Jednozubni titan implantat</li>
-            <li>Implant-podržana mostna konstrukcija</li>
-            <li>All-on-4 protokol (cijela vilica)</li>
-            <li>Koštana augmentacija (nadogradnja kosti)</li>
-        </ul>
-    </li>
+    <section id="zubni-implatanti" class="zubni-implatanti-blok">
+        <h2>Šta uključuje ugradnja implantata?</h2>
+            <ul>
+                <li>Pregled i priprema
+                    <ul>
+                        <li>Digitalni rendgen i OPG panorama</li>
+                        <li>Procjena gustoće kosti</li>
+                        <li>Izrada plana liječenja</li>
+                    </ul>
+                </li>
+                <li>Hirurška ugradnja
+                    <ul>
+                        <li>Lokalna anestezija</li>
+                        <li>Postavljanje titan implantata u kost</li>
+                        <li>Period cijeljenja 3-6 mjeseci</li>
+                    </ul>
+                </li>
+                <li>Završna faza
+                    <ul>
+                        <li>Postavljanje nadogradnje (abutment)</li>
+                        <li>Izrada i cementiranje krunice</li>
+                        <li>Kontrolni pregled</li>
+                    </ul>
+                </li>
+            </ul>
+    </section>
 
     <li id="djecija-stomatologija">
         <h3>Dječija stomatologija</h3>
@@ -123,22 +174,22 @@
         </ul>
     </li>
 </ul>
-                <a href="#vrh" class="skok-vrh-link">↑ Skoči na vrh</a>
-            </section>
-
+                </section>
+                <a href="#Usluge" class="skok-vrh-link">↑ Skoči na vrh</a>
+<!--Cjenovnik tabla -->
             <section id="cjenovnik" class="cjenovnik-sekcija">
-                <h2>Cjenovnik usluga</h2>
+                <h3>Cjenovnik usluga</h3>
                 <p>Sve cijene su izražene u KM (konvertibilna marka) i uključuju PDV.</p>
 
-                <div class="tabela-omotac">
-                    <table class="cjenik-tabela">
+                
+                    <table>
                         <caption>Cjenovnik stomatoloških usluga ordinacije Denta Centar, Tuzla — 2026</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Usluga</th>
-                                <th scope="col">Opis</th>
-                                <th scope="col">Trajanje</th>
-                                <th scope="col">Cijena (KM)</th>
+                                <th>Usluga</th>
+                                <th>Opis</th>
+                                <th>Trajanje</th>
+                                <th>Cijena (KM)</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -199,26 +250,23 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4">
-                                    * Konačna cijena se utvrđuje nakon pregleda. Prihvatamo gotovinu i kartice.
+                                <td>
+                                  <c>* Konačna cijena se utvrđuje nakon pregleda. Prihvatamo gotovinu i kartice.</c>  
                                 </td>
                             </tr>
                         </tfoot>
                     </table>
-                </div>
+                
             </section>
-
+<!-- Galerija -->
             <section id="galerija" class="galerija-sekcija">
                 <h2>Galerija ordinacije</h2>
                 <p>Pogledajte naše moderne prostore i opremu.</p>
 
-                <div class="image-map-omotac">
                     <h3>Prostorije ordinacije</h3>
 
-                    <img 
-                        src="images/ordinacija-mapa.jpg" 
-                        alt="Tlocrt stomatološke ordinacije Denta Centar sa označenim prostorijama"
-                        usemap="#ordinacija-mapa"
+                    <img src="images/ordinacija.jpg" 
+                        alt="Stomatološka ordinacije Denta Centar"
                         width="600" height="350"
                         id="ordinacijaSlika">
 
@@ -258,23 +306,22 @@
                         <p id="imageMapTekst"></p>
                         <button onclick="document.getElementById('imageMapInfo').hidden=true">✕ Zatvori</button>
                     </div>
-                </div>
 
                 <div class="galerija-mreza">
                     <figure class="galerija-item">
                         <img src="images/ordinacija-1.jpg" 
-                             alt="Moderna stomatološka stolica u ordinaciji broj 1" 
+                             alt="Moderna stomatološka stolica u ordinaciji" 
                              loading="lazy">
                         <figcaption>Ordinacija 1 — moderna oprema</figcaption>
                     </figure>
                     <figure class="galerija-item">
-                        <img src="images/cjekaonica.jpg" 
+                        <img src="images/cekaonica.jpg" 
                              alt="Udobna čekaonica sa zelenim biljkama i udobnim stolicama" 
                              loading="lazy">
                         <figcaption>Čekaonica — prijatna atmosfera</figcaption>
                     </figure>
                     <figure class="galerija-item">
-                        <img src="images/rendgen.jpg" 
+                        <img src="images/rengen.jpg" 
                              alt="Digitalni OPG rentgen aparat" 
                              loading="lazy">
                         <figcaption>Digitalni rendgen</figcaption>
@@ -285,23 +332,22 @@
                              loading="lazy">
                         <figcaption>Sterilizacijska soba</figcaption>
                     </figure>
-                    <figure class="galerija-item">
-                        <img src="images/djeca-ordinacija.jpg" 
-                             alt="Šarena diječja ordinacija sa crtićima na zidovima" 
+                    <figure class="djecija-ordinacija"   
+                    <img src="images/djeca-ordinacija.jpg" 
+                             alt="Dječja ordinacija" 
                              loading="lazy">
-                        <figcaption>Dječija ordinacija</figcaption>
-                    </figure>
+                    </figure> 
                     <figure class="galerija-item">
                         <img src="images/tim-foto.jpg" 
                              alt="Tim DentaCentar ordinacije — tri doktora Dental Centra" 
                              loading="lazy">
-                        <figcaption>Naš tim</figcaption>
                     </figure>
                 </div>
-
-                <a href="#vrh" class="skok-vrh-link">↑ Skoči na vrh</a>
+<div class="skoci-na-vrh">  
+                <a href="#Usluge" class="skok-vrh-link">↑ Skoči na vrh</a>
+</div>
             </section>
-
+<!-- -->
             <section id="tim" class="tim-sekcija">
                 <h2>Naš tim</h2>
                 <p>Upoznajte stručnjake koji brinu o vašem osmijehu.</p>
@@ -313,7 +359,7 @@
                              loading="lazy">
                         <div class="tim-info">
                             <h3>Dr. Amra Hodžić</h3>
-                            <p class="tim-titula">Specijalista oralne hirurgije</p>
+                            <p>Specijalista oralne hirurgije</p>
                             <p>15 godina iskustva u oralnoj hirurgiji i implantologiji.</p>
                         </div>
                     </article>
@@ -343,27 +389,6 @@
         </main>
 
         <aside>
-
-            <!-- Sidebar navigacija po sekcijama stranice -->
-<nav class="glavnisadrzaj-nav">
-    <div class="navsadrzaj-item dropdown">
-        <a href="sadrzaj.html" class="nav-link">Kategorije usluga ▾</a>
-        <div class="dropdownsadrzaj-meni">
-            <a href="sadrzaj.html#pregled-dijagnostika">Pregled i dijagnostika</a>
-            <a href="sadrzaj.html#izbjeljivanje-estetika">Izbjeljivanje i estetika</a>
-            <a href="sadrzaj.html#zubni-aparatici">Zubni aparatići</a>
-            <a href="sadrzaj.html#zubni-implantati">Zubni implantati</a>
-            <a href="sadrzaj.html#djecija-stomatologija">Dječija stomatologija</a>
-            <a href="sadrzaj.html#zubne-fasete">Zubne fasete</a>
-        </div>
-    </div>
-
-    <a href="cjenovnik.html" class="navsadrzaj-link">Cjenovnik</a>
-    <a href="galerija.html" class="navsadrzaj-link">Galerija</a>
-    <a href="nas-tim.html" class="navsadrzaj-link">Naš tim</a>
-</nav>
-
-
             <div class="aside-blok">
                 <h3>Radno vrijeme</h3>
                 <ul class="radno-vrijeme">
@@ -377,9 +402,6 @@
 
         </aside>
 
-    </div>
-
-    <a id="vrh" aria-hidden="true"></a>
 
 <footer>
     <p>Mirza Alihodžić | Mirza Ibrišimović | Muhamed Duraković</p>
@@ -388,4 +410,24 @@
 
     <script src="js/tptpskripte.js"></script>
 </body>
+<!--
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+</script>
+-->
 </html>
