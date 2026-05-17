@@ -43,7 +43,7 @@
     user-select: none;
 }
 
-/* Beli krug koji se pomijera */
+/* Bijeli krug koji se pomijera */
 .ball {
     position: absolute;
     width: 27px;
@@ -80,7 +80,7 @@ body {
     color: var(--text);
 }
 
-/* HEADER NOVI, ONAJ MI SE NE SVIDJA NIKAKO */
+/* HEADER NOVI*/
 /* HERO KONTEJNER */
 .hero-container {
     position: relative; 
@@ -120,10 +120,10 @@ body {
     z-index: 3; 
     height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: left;
-    padding-left: 27%;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;    
+    padding: 0 20px;     
 }
 
 /* VELIKI NASLOV */
@@ -176,6 +176,42 @@ body {
 
 .main-nav a:hover {
     color: var(--secondary);
+}
+
+
+/* RESPONSIVE POPRAVKA ZA NAV BAR (DENTAL CENTAR) - GEMINI*/
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;  
+        align-items: center;      
+        gap: 12px;              
+        padding: 12px 15px;   
+    }
+
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;      
+        justify-content: center;
+        flex-wrap: wrap;          
+        gap: 8px;            
+    }
+
+    .main-nav a {
+        margin: 0 5px;          
+        font-size: 0.95rem;       
+    }
+
+    #darkModeToggle {
+        margin-top: 5px;
+    }
+
+    /* Pošto se visina headera povećala jer su elementi jedan ispod drugog, */
+    /* moramo povećati padding-top na body-ju da nam sadržaj ne uleti pod nav bar */
+    body {
+        padding-top: 140px !important; 
+    }
 }
 
 /* LAYOUT */
