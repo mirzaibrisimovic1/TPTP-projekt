@@ -22,10 +22,9 @@
             <a href="index.html">Početna</a>
             <a href="sadrzaj.html">Sadržaj</a>
             <a href="kontakt.html" class="active">Kontakt</a>
-              <a href="https://github.com/mirzaibrisimovic1/Grupa49-TPTP-2026">GitHub</a>
         </nav>
 
-        <button id="darkModeToggle">
+        <button id="darkModeToggle" aria-label="Promijeni temu">
             <span class="icon sun">☀️</span>
             <span class="icon moon">🌙</span>
             <div class="ball"></div>
@@ -45,24 +44,15 @@
 
                     <div class="info-contact">
                         <div class="information">
-                            <picture>
-                                <source srcset="img/lokacija.webp" type="image/webp">
-                                <img src="img/lokacija.png" class="icon-img" alt="Lokacija" />
-                            </picture>
-                            <p>FM23+C6P, Živinice 75270</p>
+                            <i class="fa-solid fa-location-dot contact-icon-style"></i>
+                            <p>Oslobođenja, Živinice 25720</p>
                         </div>
                         <div class="information">
-                            <picture>
-                                <source srcset="img/email.webp" type="image/webp">
-                                <img src="img/email.png" class="icon-img" alt="Email adresa" />
-                            </picture>
+                            <i class="fa-solid fa-envelope contact-icon-style"></i>
                             <p>dentalcentar@gmail.com</p>
                         </div>
                         <div class="information">
-                            <picture>
-                                <source srcset="img/telefon.webp" type="image/webp">
-                                <img src="img/telefon.png" class="icon-img" alt="Broj telefona" />
-                            </picture>
+                            <i class="fa-solid fa-phone contact-icon-style"></i>
                             <p>123-456-789</p>
                         </div>
                     </div>
@@ -73,22 +63,18 @@
                             <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                             <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Linkedin"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-form-box">
-                    <div id="success-message" class="success-box hidden">
-                        <i class="fas fa-paper-plane success-icon"></i>
-                        <h2>Hvala vam!</h2>
-                        <p id="success-text"></p>
-                        <button id="back-btn" class="btn-form btn-secondary-form">Nazad na formu</button>
-                    </div>
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
 
-                    <form id="main-contact-form" autocomplete="off" novalidate>
+                    <form action="kontakt.html" autocomplete="off" id="main-contact-form">
                         <h3 class="title-contact">Kontaktirajte nas</h3>
-
+                        
                         <div class="input-container">
                             <input type="text" name="firstName" id="firstName" class="input" />
                             <label for="firstName">Ime</label>
@@ -113,12 +99,14 @@
                             <div class="error-message" id="phone-error"></div>
                         </div>
 
-                        <div class="input-container select-container focus">
+                        <div class="input-container select-container">
                             <select name="subject" id="subject" class="input select-input">
                                 <option value="" disabled selected hidden></option>
-                                <option value="Opći upit">Opći upit</option>
-                                <option value="Tehnička podrška">Tehnička podrška</option>
-                                <option value="Poslovna saradnja">Poslovna saradnja</option>
+                                <option value="pregled">Opšti pregled</option>
+                                <option value="popravka">Popravka i liječenje zuba</option>
+                                <option value="estetika">Estetska stomatologija</option>
+                                <option value="ortodoncija">Ortodoncija (Aparatići)</option>
+                                <option value="drugo">Drugo</option>
                             </select>
                             <label for="subject">Tema upita</label>
                             <div class="error-message" id="subject-error"></div>
@@ -132,10 +120,18 @@
 
                         <div class="form-actions">
                             <input type="submit" value="Pošalji" class="btn-form" />
+                            <button type="reset" id="reset-form-btn" class="btn-form btn-reset">Resetuj</button>
                         </div>
                     </form>
+
+                    <div id="success-message" class="success-box hidden">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <p id="success-text"></p>
+                        <button id="back-btn" class="btn-form">Nazad na formu</button>
+                    </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <section class="banner">
@@ -143,15 +139,46 @@
             <h2>Pratite nas na društvenim mrežama</h2>
             <p>Budite u toku sa najnovijim popustima i uslugama.</p>
             <div class="drustvene-mreze">
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Dental Centar. Sva prava zadržana.</p>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Dental Centar</h3>
+                <p>Vrhunska stomatološka usluga prilagođena Vašim potrebama. Vaš osmijeh je naš prioritet i najveća motivacija.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Brzi Linkovi</h4>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="sadrzaj.html">Sadržaj i Usluge</a></li>
+                    <li><a href="kontakt.html">Kontakt Stranica</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-hours">
+                <h4>Radno Vrijeme</h4>
+                <ul>
+                    <li><span>Pon - Pet:</span> <span>08:00 - 20:00</span></li>
+                    <li><span>Subota:</span> <span>09:00 - 15:00</span></li>
+                    <li><span>Nedjelja:</span> <span class="closed">Zatvoreno</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dental Centar. Sva prava zadržana.</p>
+        </div>
     </footer>
 
     <script src="js/tptpskripte.js"></script>
