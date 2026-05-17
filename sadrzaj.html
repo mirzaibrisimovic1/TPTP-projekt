@@ -57,7 +57,6 @@
     <main>           
         <section id="Usluge" class="Usluge-sekcija">
         <div class="Usluge-tekst"> 
-            <img src="logo.png"
             <h3>O nama i našim uslugama</h3>
             <p>Dental Centar dr. Butković iz Živinica pruža savremene stomatološke usluge uz profesionalan i individualan pristup svakom pacijentu. Ordinacija uspješno radi od 2022. godine, sa fokusom na kvalitet, sigurnost i ugodnu atmosferu.
             Nalazimo se na adresi FM23+C6P, Živinice 75270, gdje uz modernu opremu i stručan tim brinemo o zdravlju i estetici vašeg osmijeha.
@@ -69,95 +68,97 @@
         </section>   
     
 <!--Nase usluge + ugnjezdena lista-->
+        <section id="pregled-dijagnostika" class="pregled-dijagnostika">
+            <div id="pregled-dijagnostika-tekst">
+                <h3>Pregled i dijagnostika</h3>
+                <p>
+                    Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
+                    Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
+                    te daju personalizovane savjete za oralnu higijenu. 
+                </p>
+                <ul>
+                    <li>Pregled uključuje:</li>
+                    <li>Sistematski pregled zuba i desni</li>
+                    <li>Digitalni rendgen (OPG panorama)</li>
+                    <li>Procjena stanja temporomandibularnog zgloba</li>
+                    <li>Screening oralne higijene</li>
+                </ul>
+            </div>
+        </section>
+        
 
-        <div id="pregled-dijagnostika">
-            <h3>Pregled i dijagnostika</h3>
-            <p>
-                Redovni stomatološki pregled temelj je zdravih zuba i svježeg osmijeha.
-                Naši doktori provode detaljan pregled svakog zuba, desni i mekih tkiva,
-                te daju personalizovane savjete za oralnu higijenu. 
-            </p>
-            <ul>
-                <li>Pregled ukljucuje:</li>
-                <li>Sistematski pregled zuba i desni</li>
-                <li>Digitalni rendgen (OPG panorama)</li>
-                <li>Procjena stanja temporomandibularnog zgloba</li>
-                <li>Screening oralne higijene</li>
-            </ul>
-        </div>
 
-
-    <li id="izbjeljivanje-estetika">
+    <section id="izbjeljivanje-estetika">
         <h3>Izbjeljivanje zubi i estetska stomatologija</h3>
         <p>
             Postignite blistav osmijeh uz naše profesionalne tretmane izbjeljivanja i estetske korekcije.
             Prilagođavamo svaki tretman individualnim potrebama i željama pacijenta,
             koristeći najsigurnije i najefikasnije metode.
         </p>
-        <ul>
+        <ul class="estetika-lista">
             <li>Profesionalno in-office izbjeljivanje</li>
             <li>Home-bleaching set (kućni tretman)</li>
             <li>Bijele kompozitne plombe</li>
             <li>Estetske keramičke krunice</li>
         </ul>
-    </li>
+    </section>
 
-    <li id="zubni-aparatici">
+<section id="zubni-aparatici" class="zubni-aparatici-sekcija">
+    <div class="zubni-aparatici-sadrzaj">
         <h3>Zubni aparatići</h3>
         <p>
             Ispravna pozicija zuba važna je i za izgled i za zdravlje. Nudimo moderne ortodontske
             aparatiće za sve uzraste, od klasičnih metalnih do gotovo nevidljivih prozirnih udlaga,
             uz stalno praćenje i podršku tokom cijelog tretmana.
         </p>
-        <ul>
+        <ul class="aparatici-lista">
             <li>Metalni fiksni aparatić</li>
             <li>Keramički (estetski) aparatić</li>
             <li>Invisalign prozirne udlage</li>
             <li>Retajneri za stabilizaciju rezultata</li>
         </ul>
-    </li>
+
+        <button class="aparatici-dugme" onclick="prikaziSliku()">
+            Pogledaj kako izgleda aparatić
+        </button>
+    </div>
+
+    <!-- Modal sa slikom, pomoc AI alatom Claude -->
+    <div id="aparatici-modal" class="modal" onclick="zatvoriModal()">
+        <div class="modal-sadrzaj" onclick="event.stopPropagation()">
+            <button class="modal-zatvori" onclick="zatvoriModal()">✕</button>
+            <img src="images/aparatic.jpg" alt="Zubni aparatić">
+            <p>Metalni fiksni aparatić — Dental Centar</p>
+        </div>
+    </div>
+</section>
 
     <section id="zubni-implatanti" class="zubni-implatanti-blok">
         <h2>Šta uključuje ugradnja implantata?</h2>
-            <ul>
-                <li>Pregled i priprema
-                    <ul>
-                        <li>Digitalni rendgen i OPG panorama</li>
-                        <li>Procjena gustoće kosti</li>
-                        <li>Izrada plana liječenja</li>
-                    </ul>
-                </li>
-                <li>Hirurška ugradnja
-                    <ul>
-                        <li>Lokalna anestezija</li>
-                        <li>Postavljanje titan implantata u kost</li>
-                        <li>Period cijeljenja 3-6 mjeseci</li>
-                    </ul>
-                </li>
-                <li>Završna faza
-                    <ul>
-                        <li>Postavljanje nadogradnje (abutment)</li>
-                        <li>Izrada i cementiranje krunice</li>
-                        <li>Kontrolni pregled</li>
-                    </ul>
-                </li>
-            </ul>
-    </section>
-
-    <li id="djecija-stomatologija">
-        <h3>Dječija stomatologija</h3>
-        <p>
-            Zdravi mliječni zubi osnova su pravilnog razvoja trajnih zuba. Naš tim pristupa
-            djeci strpljivo i pažljivo, u opuštenoj atmosferi, kako bi svaki posjet bio
-            pozitivno iskustvo koje gradi zdrave navike za cijeli život.
-        </p>
-        <ul>
-            <li>Pregled i liječenje mliječnih zuba</li>
-            <li>Zalivanje fisura (preventivna mjera)</li>
-            <li>Fluoridacija zuba</li>
-            <li>Dječji ortodontski tretmani</li>
-        </ul>
-    </li>
+                <ol>
+                    <li>Pregled i priprema
+                        <ul>
+                            <li>Digitalni rendgen i OPG panorama</li>
+                            <li>Procjena gustoće kosti</li>
+                            <li>Izrada plana liječenja</li>
+                        </ul>
+                    </li>
+                    <li>Hirurška ugradnja
+                        <ul>
+                            <li>Lokalna anestezija</li>
+                            <li>Postavljanje titan implantata u kost</li>
+                            <li>Period cijeljenja 3-6 mjeseci</li>
+                        </ul>
+                    </li>
+                    <li>Završna faza
+                        <ul>
+                            <li>Postavljanje nadogradnje (abutment)</li>
+                            <li>Izrada i cementiranje krunice</li>
+                            <li>Kontrolni pregled</li>
+                        </ul>
+                    </li>
+                </ol>
+        </section>
 
     <li id="zubne-fasete">
         <h3>Zubne fasete</h3>
@@ -175,11 +176,11 @@
     </li>
 </ul>
                 </section>
-                <a href="#Usluge" class="skok-vrh-link">↑ Skoči na vrh</a>
-<!--Cjenovnik tabla -->
+                <div class="skoci-na-vrh"> <a href="#Usluge" class="skok-vrh-link">↑ Skoči na vrh</a>
+ </div>
+                <!--Cjenovnik tabla -->
             <section id="cjenovnik" class="cjenovnik-sekcija">
                 <h3>Cjenovnik usluga</h3>
-                <p>Sve cijene su izražene u KM (konvertibilna marka) i uključuju PDV.</p>
 
                 
                     <table>
@@ -253,6 +254,7 @@
                                 <td>
                                   <c>* Konačna cijena se utvrđuje nakon pregleda. Prihvatamo gotovinu i kartice.</c>  
                                 </td>
+                                <td><c>Sve cijene su izražene u KM (konvertibilna marka) i uključuju PDV.</c></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -265,7 +267,7 @@
 
                     <h3>Prostorije ordinacije</h3>
 
-                    <img src="images/ordinacija.jpg" 
+                    <img src="images/ordinacija1.jpg" 
                         alt="Stomatološka ordinacije Denta Centar"
                         width="600" height="350"
                         id="ordinacijaSlika">
@@ -302,14 +304,9 @@
                             onclick="prikaziInfo('Dječja ordinacija: Posebno dizajnirana za djecu, sa crtićima na stropu i nagradom za hrabre!')">
                     </map>
 
-                    <div id="imageMapInfo" class="image-map-info" hidden>
-                        <p id="imageMapTekst"></p>
-                        <button onclick="document.getElementById('imageMapInfo').hidden=true">✕ Zatvori</button>
-                    </div>
-
                 <div class="galerija-mreza">
                     <figure class="galerija-item">
-                        <img src="images/ordinacija-1.jpg" 
+                        <img src="images/ordinacija.jpg" 
                              alt="Moderna stomatološka stolica u ordinaciji" 
                              loading="lazy">
                         <figcaption>Ordinacija 1 — moderna oprema</figcaption>
@@ -332,8 +329,8 @@
                              loading="lazy">
                         <figcaption>Sterilizacijska soba</figcaption>
                     </figure>
-                    <figure class="djecija-ordinacija"   
-                    <img src="images/djeca-ordinacija.jpg" 
+                    <figure class="djecija-ordinacija">  
+                    <img src="images/djecija-ordinacija.jpg" 
                              alt="Dječja ordinacija" 
                              loading="lazy">
                     </figure> 
@@ -341,6 +338,7 @@
                         <img src="images/tim-foto.jpg" 
                              alt="Tim DentaCentar ordinacije — tri doktora Dental Centra" 
                              loading="lazy">
+                             <figcaption>Tim Denta Centar</figcaption>
                     </figure>
                 </div>
 <div class="skoci-na-vrh">  
@@ -348,59 +346,68 @@
 </div>
             </section>
 <!-- -->
-            <section id="tim" class="tim-sekcija">
-                <h2>Naš tim</h2>
-                <p>Upoznajte stručnjake koji brinu o vašem osmijehu.</p>
+    <section id="tim" class="tim-sekcija">
+    <div class="tim-header">
+        <h2>Naš tim</h2>
+        <p>Upoznajte stručnjake koji brinu o vašem osmijehu. Svaki član našeg tima posjeduje višegodišnje iskustvo i kontinuirano se usavršava kako bismo vam pružili najbolju moguću njegu.</p>
+    </div>
 
-                <div class="tim-mreza">
-                    <article class="tim-kartica">
-                        <img src="images/doktor1.jpg" 
-                             alt="Dr. Amra Hodžić, specijalista oralne hirurgije" 
-                             loading="lazy">
-                        <div class="tim-info">
-                            <h3>Dr. Amra Hodžić</h3>
-                            <p>Specijalista oralne hirurgije</p>
-                            <p>15 godina iskustva u oralnoj hirurgiji i implantologiji.</p>
-                        </div>
-                    </article>
-                    <article class="tim-kartica">
-                        <img src="images/doktor2.jpg" 
-                             alt="Dr. Emir Bašić, ortodont" 
-                             loading="lazy">
-                        <div class="tim-info">
-                            <h3>Dr. Emir Bašić</h3>
-                            <p class="tim-titula">Ortodont</p>
-                            <p>Specijalista za ispravljanje zuba i ortodontske terapije.</p>
-                        </div>
-                    </article>
-                    <article class="tim-kartica">
-                        <img src="images/doktor3.jpg" 
-                             alt="Dr. Lejla Muratović, pedijatijski stomatolog" 
-                             loading="lazy">
-                        <div class="tim-info">
-                            <h3>Dr. Lejla Muratović</h3>
-                            <p class="tim-titula">Pedijatrijski stomatolog</p>
-                            <p>Specijalizovana za rad sa djecom i prevenciju karijesa.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-        <aside>
-            <div class="aside-blok">
-                <h3>Radno vrijeme</h3>
-                <ul class="radno-vrijeme">
-                    <li><span>Pon - Pet</span><span>08:00 - 20:00</span></li>
-                    <li><span>Subota</span><span>09:00 - 15:00</span></li>
-                    <li><span>Nedjelja</span><span class="zatvoreno">Zatvoreno</span></li>
-                </ul>
-                <!-- JS će popuniti ovaj element live statusom ordinacije -->
-                <div id="statusOrdinacije" class="status-ordinacije"></div>
+    <div class="tim-mreza">
+        <article class="tim-kartica">
+            <picture>
+                <img src="images/doktor2.jpg" 
+                     alt="Dr. Amra Hodžić, specijalista oralne hirurgije" 
+                     loading="lazy">
+            </picture>
+            <div class="tim-info">
+                <h3>Dr. Amra Hodžić</h3>
+                <p>Specijalista oralne hirurgije</p>
+                <p>15 godina iskustva u oralnoj hirurgiji i implantologiji.</p>
             </div>
+        </article>
+        <article class="tim-kartica">
+            <picture>
+                <img src="images/doktor1.jpg" 
+                     alt="Dr. Emir Bašić, ortodont" 
+                     loading="lazy">
+            </picture>
+            <div class="tim-info">
+                <h3>Dr. Emir Bašić</h3>
+                <p class="tim-titula">Ortodont</p>
+                <p>Specijalista za ispravljanje zuba i ortodontske terapije.</p>
+            </div>
+        </article>
+        <article class="tim-kartica">
+            <img src="images/doktor3.png" 
+                 alt="Dr. Hamza Muratović, pedijatijski stomatolog" 
+                 loading="lazy">
+            <div class="tim-info">
+                <h3>Dr. Hamza Muratović</h3>
+                <p class="tim-titula">Pedijatrijski stomatolog</p>
+                <p>Specijalizovan za rad sa djecom i prevenciju karijesa.</p>
+            </div>
+        </article>
+    </div>
+</section>
+<section id="radno-vrijeme-sekcija" class="radno-vrijeme-sekcija">
+    <div class="radno-vrijeme-blok">
+        <h2>Radno vrijeme</h2>
+        <ul class="radno-vrijeme">
+            <li><span>Pon - Pet</span><span>08:00 - 20:00</span></li>
+            <li><span>Subota</span><span>09:00 - 15:00</span></li>
+            <li><span>Nedjelja</span><span class="zatvoreno">Zatvoreno</span></li>
+        </ul>
+    </div>
+
+    <aside>
+        <div id="statusOrdinacije" class="status-ordinacije"></div>
+    </aside>
+</section>
 
         </aside>
+        </main>
+
+
 
 
 <footer>
