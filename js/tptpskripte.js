@@ -144,3 +144,132 @@ function updateStatus() {
 
 updateStatus();
 setInterval(updateStatus, 60000);
+
+
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if (this.value == "") {
+        parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+    if (input.value !== "") {
+        input.parentNode.classList.add("focus");
+    }
+});
+
+// validacija //
+const contactForm = document.getElementById("main-contact-form");
+const successBox = document.getElementById("success-message");
+const successText = document.getElementById("success-text");
+const backBtn = document.getElementById("back-btn");
+
+function showError(inputId, message) {
+    const container = document.getElementById(inputId).parentNode;
+    const errorDiv = document.getElementById(`${inputId}-error`);
+    container.classList.add("error");
+    errorDiv.textContent = message;
+}
+
+function clearError(inputId) {
+    const container = document.getElementById(inputId).parentNode;
+    const errorDiv = document.getElementById(`${inputId}-error`);
+    container.classList.remove("error");
+    errorDiv.textContent = "";
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// Submit forma //
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const firstName = document.getElementById("firstName");
+    const lastName = document.getElementById("lastName");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+
+    let isValid = true;
+
+    if (firstName.value.trim() === "") {
+        showError("firstName", "Ime je obavezno polje.");
+        isValid = false;
+    } else {
+        clearError("firstName");
+    }
+
+    if (lastName.value.trim() === "") {
+        showError("lastName", "Prezime je obavezno polje.");
+        isValid = false;
+    } else {
+        clearError("lastName");
+    }
+
+    if (email.value.trim() === "") {
+        showError("email", "Email je obavezno polje.");
+        isValid = false;
+    } else if (!validateEmail(email.value.trim())) {
+        showError("email", "Unesite ispravnu email adresu.");
+        isValid = false;
+    } else {
+        clearError("email");
+    }
+
+    const phoneRegex = /^[0-9\s\-]+$/;
+    if (phone.value.trim() === "") {
+        showError("phone", "Telefon je obavezno polje.");
+        isValid = false;
+    } else if (!phoneRegex.test(phone.value.trim())) {
+        showError("phone", "Dozvoljeni su samo brojevi, razmaci i crtice.");
+        isValid = false;
+    } else {
+        clearError("phone");
+    }
+
+    if (subject.value === "") {
+        showError("subject", "Molimo odaberite temu upita.");
+        isValid = false;
+    } else {
+        clearError("subject");
+    }
+
+    if (message.value.trim() === "") {
+        showError("message", "Poruka ne moÅ¾e biti prazna.");
+        isValid = false;
+    } else {
+        clearError("message");
+    }
+
+    if (isValid) {
+        successText.textContent = `PoÅ¡tovani ${firstName.value.trim()}, primili smo vaÅ¡ upit. NaÅ¡a podrÅ¡ka Ä‡e se javiti uskoro.`;
+        contactForm.classList.add("hidden");
+        successBox.classList.remove("hidden");
+    }
+});
+
+// Reset dugme
+backBtn.addEventListener("click", () => {
+    contactForm.reset();
+    inputs.forEach((input) => {
+        input.parentNode.classList.remove("focus");
+    });
+    document.getElementById("subject").parentNode.classList.add("focus");
+    successBox.classList.add("hidden");
+    contactForm.classList.remove("hidden");
+});
