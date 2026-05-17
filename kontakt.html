@@ -1,1 +1,158 @@
 <!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Dental Centar</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/tptpstil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Dental Centar</h1>
+        </div>
+
+        <nav class="main-nav">
+            <a href="index.html">Početna</a>
+            <a href="sadrzaj.html">Sadržaj</a>
+            <a href="kontakt.html" class="active">Kontakt</a>
+        </nav>
+
+        <button id="darkModeToggle">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+            <div class="ball"></div>
+        </button>
+    </header>
+
+    <main class="contact-page-wrapper">
+        <div class="container-contact">
+            <span class="big-circle"></span>
+
+            <div class="form-box">
+                <div class="contact-info">
+                    <h3 class="title-contact">Ostanimo u kontaktu!</h3>
+                    <p class="text-contact">
+                        Ispod se nalaze svi načini na koji nas možete kontaktirati, ali i pratiti i podržavati naš rad!
+                    </p>
+
+                    <div class="info-contact">
+                        <div class="information">
+                            <picture>
+                                <source srcset="img/lokacija.webp" type="image/webp">
+                                <img src="img/lokacija.png" class="icon-img" alt="Lokacija" />
+                            </picture>
+                            <p>FM23+C6P, Živinice 75270</p>
+                        </div>
+                        <div class="information">
+                            <picture>
+                                <source srcset="img/email.webp" type="image/webp">
+                                <img src="img/email.png" class="icon-img" alt="Email adresa" />
+                            </picture>
+                            <p>dentalcentar@gmail.com</p>
+                        </div>
+                        <div class="information">
+                            <picture>
+                                <source srcset="img/telefon.webp" type="image/webp">
+                                <img src="img/telefon.png" class="icon-img" alt="Broj telefona" />
+                            </picture>
+                            <p>123-456-789</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <p>Povežite se s nama :</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <div id="success-message" class="success-box hidden">
+                        <i class="fas fa-paper-plane success-icon"></i>
+                        <h2>Hvala vam!</h2>
+                        <p id="success-text"></p>
+                        <button id="back-btn" class="btn-form btn-secondary-form">Nazad na formu</button>
+                    </div>
+
+                    <form id="main-contact-form" autocomplete="off" novalidate>
+                        <h3 class="title-contact">Kontaktirajte nas</h3>
+
+                        <div class="input-container">
+                            <input type="text" name="firstName" id="firstName" class="input" />
+                            <label for="firstName">Ime</label>
+                            <div class="error-message" id="firstName-error"></div>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="text" name="lastName" id="lastName" class="input" />
+                            <label for="lastName">Prezime</label>
+                            <div class="error-message" id="lastName-error"></div>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="email" name="email" id="email" class="input" />
+                            <label for="email">Email</label>
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="tel" name="phone" id="phone" class="input" />
+                            <label for="phone">Telefon</label>
+                            <div class="error-message" id="phone-error"></div>
+                        </div>
+
+                        <div class="input-container select-container focus">
+                            <select name="subject" id="subject" class="input select-input">
+                                <option value="" disabled selected hidden></option>
+                                <option value="Opći upit">Opći upit</option>
+                                <option value="Tehnička podrška">Tehnička podrška</option>
+                                <option value="Poslovna saradnja">Poslovna saradnja</option>
+                            </select>
+                            <label for="subject">Tema upita</label>
+                            <div class="error-message" id="subject-error"></div>
+                        </div>
+
+                        <div class="input-container textarea">
+                            <textarea name="message" id="message" class="input"></textarea>
+                            <label for="message">Poruka</label>
+                            <div class="error-message" id="message-error"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <input type="submit" value="Pošalji" class="btn-form" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+
+    <section class="banner">
+        <div class="banner-sadrzaj">
+            <h2>Pratite nas na društvenim mrežama</h2>
+            <p>Budite u toku sa najnovijim popustima i uslugama.</p>
+            <div class="drustvene-mreze">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dental Centar. Sva prava zadržana.</p>
+    </footer>
+
+    <script src="app/tptpskripte.js"></script>
+</body>
+</html>
