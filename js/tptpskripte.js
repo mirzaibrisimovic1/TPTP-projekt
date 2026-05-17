@@ -102,14 +102,14 @@ if (contactForm) {
         }
 
         if (message.value.trim() === "") {
-            showError("message", "Poruka ne moÅ¾e biti prazna.");
+            showError("message", "Poruka ne može biti prazna.");
             isValid = false;
         } else {
             clearError("message");
         }
 
         if (isValid) {
-            successText.textContent = `PoÅ¡tovani ${firstName.value.trim()}, primili smo vaÅ¡ upit. NaÅ¡a podrÅ¡ka Ä‡e se javiti uskoro.`;
+            successText.textContent = `Poštovani ${firstName.value.trim()}, primili smo vaš upit. Naša podrška će se javiti uskoro.`;
             contactForm.classList.add("hidden");
             successBox.classList.remove("hidden");
         }
