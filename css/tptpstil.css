@@ -330,7 +330,7 @@ footer {
 }
 
 /* ANIMACIJA */
-.banner {
+.banner-muki {
     /* Pozadinska slika sa tamnim filterom preko nje */
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
                 url('../images/ordinacija.jpg');
@@ -342,7 +342,7 @@ footer {
     color: white;
 }
 
-.container {
+.container-muki {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -351,18 +351,18 @@ footer {
     align-items: center;
 }
 
-.logo img {
+.logo-muki img {
     height: 80px;
 }
 
-.social-icons a {
+.social-icons-muki a {
     color: var(--primary);
     font-size: 24px;
     margin-left: 15px;
     text-decoration: none;
 }
 
-.social-icons a:hover {
+.social-icons-muki a:hover {
     color: var(--accent);
 }
 
