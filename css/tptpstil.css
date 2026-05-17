@@ -1689,7 +1689,7 @@ aside {
     --bg: #b2d2ca;
     --text: #1e2d2b;
     
-    /* Varijable iz kontakt forme */
+
     --primary-dark: #218274;
     --primary-color: #4c9989;
     --primary-medium: #70a894;
@@ -1701,20 +1701,19 @@ aside {
     --text-muted: #555555;
     --white: #ffffff;
     
-    /* Footer specifične varijable */
+
     --footer-bg: #1e2d2b;
     --footer-text: #b2d2ca;
     --footer-title: #ffffff;
     --footer-bottom-bg: #141f1d;
 }
 
-/* DARK MODE DEFINICIJA */
 .dark {
     --bg: #1a1a1a;
     --text: #218274;
     --card-bg: #2a2a2a;
     
-    /* Dark mode za kontakt formu */
+
     --bg-light: #1a1a1a;
     --bg-card: #2a2a2a;
     --text-dark: #f5f5f5;
@@ -1722,14 +1721,14 @@ aside {
     --primary-dark: #154f46;
     --primary-color: #218274;
     
-    /* Dark mode za moderni footer */
+
     --footer-bg: #111111;
     --footer-text: #a0a0a0;
     --footer-title: #218274;
     --footer-bottom-bg: #0a0a0a;
 }
 
-/* Primjena tamne teme specifično na omotač kontakt forme radi izolacije */
+
 body.dark .contact-page-wrapper {
     --bg-light: #1a1a1a;
     --bg-card: #2a2a2a;
@@ -1739,7 +1738,7 @@ body.dark .contact-page-wrapper {
     --primary-color: #218274;
 }
 
-/* RESET ELEMENTA */
+
 * {
     margin: 0;
     padding: 0;
@@ -1755,7 +1754,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* DARK MODE TOGGLE BUTTON STIL */
+
 #darkModeToggle {
     all: unset;
     width: 60px;
@@ -1979,7 +1978,6 @@ textarea.input {
     top: 0.7rem;
 }
 
-/* LOGIKA LOGIČKOG FOCUS-A IZ JS KODA */
 .input-container.focus label {
     top: 0;
     transform: translateY(-50%);
@@ -1993,7 +1991,6 @@ textarea.input {
     border: 2px solid var(--white);
 }
 
-/* ERROR VALIDACIJA STILOVI */
 .error-message {
     color: #ffcccc;
     font-size: 0.75rem;
@@ -2007,7 +2004,6 @@ textarea.input {
     border-color: #ff6666 !important;
 }
 
-/* DUGMAD I AKCIJE UNUTAR FORME */
 .form-actions {
     display: flex;
     gap: 15px;
@@ -2046,7 +2042,6 @@ textarea.input {
     border-color: var(--white);
 }
 
-/* SUCCESS BOX NAKON SLANJA */
 .success-box {
     position: absolute;
     top: 0;
@@ -2081,7 +2076,6 @@ textarea.input {
     display: none !important;
 }
 
-/* INFORMACIJE SA LIJEVE STRANE FORM-BOXA */
 .contact-info {
     padding: 2.3rem 2.2rem;
     position: relative;
@@ -2106,7 +2100,7 @@ textarea.input {
     font-size: 0.95rem;
 }
 
-/* Stilovi za nove info vektorske ikonice */
+/* Ikonice napravio Gemini AI*/
 .contact-icon-style {
     font-size: 1.3rem;
     color: var(--primary-color);
@@ -2194,7 +2188,6 @@ body.dark .contact-icon-style {
     opacity: 0.4;
 }
 
-/* KARTICE I OSTALI UNIFICIRANI ELEMENTI SA STRANICE SADRŽAJ */
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2219,7 +2212,6 @@ body.dark .contact-icon-style {
     to { opacity: 1; }
 }
 
-/* RESPONSIVENESS (BREAKPOINTS) */
 @media (max-width: 900px) {
     .form-box {
         max-width: 760px;
@@ -2263,9 +2255,6 @@ body.dark .contact-icon-style {
     }
 }
 
-/* ============================================================================================ */
-/* IMPLEMENTACIJA NOVOG, MODERNOG I ČISTOG FOOTER-A */
-/* ============================================================================================ */
 .modern-footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
