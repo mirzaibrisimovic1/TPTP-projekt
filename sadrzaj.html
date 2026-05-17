@@ -32,25 +32,7 @@
     <span class="icon moon">🌙</span>
     <div class="ball"></div>
     </button>
-    <!--
-<nav class="sidebar">
-        <a href="#Usluge">O nama</a>
-        <button class="dropdown">Sve usluge
-        <i class="pokazivac"></i>
-        </button>
-    <div class="dropdown-kontent">
-            <a href="#pregled-dijagnostika">Pregled i dijagnostika</a>
-            <a href="#izbjeljivanje-estetika">Izbjeljivanje i estetika</a>
-            <a href="#zubni-aparatici">Zubni aparatići</a>
-            <a href="#zubni-implantati">Zubni implantati</a>
-            <a href="#djecija-stomatologija">Dječija stomatologija</a>
-            <a href="#zubne-fasete">Zubne fasete</a>
-    </div>
-            <a href="#cjenovnik">Cjenovnik</a>
-            <a href="#galerija">Galerija</a>
-            <a href="#nas-tim">Naš tim</a>
-</nav>
--->
+   
 
 </header>
 
@@ -63,9 +45,32 @@
             Nalazimo se na adresi FM23+C6P, Živinice 75270, gdje uz modernu opremu i stručan tim brinemo o zdravlju i estetici vašeg osmijeha.
             Pružamo širok spektar stomatoloških usluga </p>
         </div>
-        <div class="Usluge-slika">
-            <img src="images/Usluge.jpg" alt="Doktor klinike">
-        </div>
+<div class="Usluge-slika">
+    <img src="images/Usluge.jpg" 
+         alt="Doktor klinike"
+         usemap="#usluge-mapa">
+
+    <map name="usluge-mapa">
+        <area 
+            shape="rect" 
+            coords="0,0,300,200" 
+            href="#pregled-dijagnostika" 
+            alt="Pregled i dijagnostika"
+            title="Pregled i dijagnostika">
+        <area 
+            shape="circle" 
+            coords="150,350,80" 
+            href="#izbjeljivanje-estetika" 
+            alt="Izbjeljivanje"
+            title="Izbjeljivanje zubi">
+        <area 
+            shape="rect" 
+            coords="0,250,300,450" 
+            href="#zubni-aparatici" 
+            alt="Zubni aparatići"
+            title="Zubni aparatići">
+    </map>
+</div>
         </section>   
     
 <!--Nase usluge + ugnjezdena lista-->

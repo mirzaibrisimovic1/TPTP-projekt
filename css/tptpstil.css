@@ -596,56 +596,179 @@ footer {
 /* ============================================================================================ */
 /* ============================================================================================ */
 /* Mirza */
-.sidebar{
-height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #8fbaaa;
-  overflow-x: hidden;
-  padding-top: 20px;
+
+
+/* =====================================================
+   MEDIA QUERIES — responzivni dizajn
+   Stranica se prilagođava različitim veličinama ekrana
+   kroz 3 breakpointa: mobitel, tablet i desktop 
+   AI koristen kako bi razumio kordinaciju i smanjivanje veličina
+   ===================================================== */
+
+/* MOBITEL — manji od 600px */
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  nav.main-nav {
+    gap: 12px;
+  }
+
+  #Usluge.Usluge-sekcija {
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+
+  .Usluge-tekst {
+    padding-left: 0;
+  }
+
+  .Usluge-tekst h3 {
+    font-size: 1.8rem;
+  }
+
+  .galerija-mreza {
+    grid-template-columns: 1fr;
+  }
+
+  .tim-mreza {
+    grid-template-columns: 1fr;
+  }
+
+  .implantati-koraci {
+    grid-template-columns: 1fr;
+  }
+
+  .aparatici-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .estetika-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .cjenovnik-sekcija,
+  .galerija-sekcija,
+  .tim-sekcija,
+  .zubni-implatanti-blok,
+  .radno-vrijeme-sekcija {
+    padding: 40px 16px;
+  }
+
+  #izbjeljivanje-estetika {
+    padding: 32px 16px;
+    margin: 16px;
+  }
+
+  table {
+    font-size: 0.75rem;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px 10px;
+  }
+
+  aside {
+    position: static;
+    transform: none;
+    margin: 16px;
+  }
+
+  .radno-vrijeme-sekcija {
+    flex-direction: column;
+  }
 }
 
-.dropdown-kontent{
-    display: none;
-    background-color: #8fbaaa;
-    color:#218274;
+/* TABLET — od 600px do 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  header {
+    padding: 14px 24px;
+  }
+
+  #Usluge.Usluge-sekcija {
+    flex-direction: column;
+    padding: 48px 32px;
+  }
+
+  .Usluge-tekst {
+    padding-left: 0;
+  }
+
+  .galerija-mreza {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tim-mreza {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .implantati-koraci {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .cjenovnik-sekcija,
+  .galerija-sekcija,
+  .tim-sekcija,
+  .zubni-implatanti-blok {
+    padding: 48px 32px;
+  }
+
+  #izbjeljivanje-estetika {
+    margin: 16px 32px;
+    padding: 40px 32px;
+  }
+
+  aside {
+    position: static;
+    transform: none;
+    margin: 24px 32px;
+  }
+
+  .radno-vrijeme-sekcija {
+    flex-direction: column;
+    padding: 48px 32px;
+  }
 }
 
-.sidebar a  .dropdown{
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #218274;
-    display: block;
-    border: none;
-    background: #8fbaaa;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-}
-.sidebar a:hover  .dropdown:hover{
-    background-color: #70a894;
-    color: white;  
-}
-.dropdown :active {
-    background-color: #70a894;
-    color: white;
-    opacity: 0.5;
-}
-.pokazivac {
-    float: right;
-    padding-right: 8px;
+/* DESKTOP — više od 900px */
+@media (min-width: 900px) {
+
+  #Usluge.Usluge-sekcija {
+    flex-direction: row;
+  }
+
+  .galerija-mreza {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tim-mreza {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .implantati-koraci {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  aside {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .radno-vrijeme-sekcija {
+    flex-direction: row;
+  }
 }
 
-/* Sa w3schools */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
 table {
      background-color: var(--card-bg);
      border-radius: 12px;
@@ -956,7 +1079,7 @@ tr:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f4f4;
+  background-color: var(--bg);
   padding: 80px 40px;
   text-align: center;
 }
@@ -969,7 +1092,7 @@ tr:hover {
 .zubni-aparatici-sadrzaj h3 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--primary);
   margin-bottom: 16px;
 }
 
@@ -978,7 +1101,7 @@ tr:hover {
   display: block;
   width: 56px;
   height: 3px;
-  background: var(--boja-akcenat);
+  background: var(--card-bg);
   border-radius: 2px;
   margin: 12px auto 0;
 }
@@ -1015,7 +1138,7 @@ tr:hover {
   content: '✔';
   position: absolute;
   left: 14px;
-  color: var(--boja-akcenat);
+  color: var(--accent);
 }
 
 .aparatici-lista li:hover {
@@ -1024,12 +1147,12 @@ tr:hover {
 }
 
 .aparatici-lista li:nth-child(even) {
-  border-left: 2px solid var(--boja-akcenat);
+  border-left: 2px solid var(--accent);
 }
 
 .aparatici-dugme {
-  background: var(--boja-akcenat);
-  color: #111;
+  background: var(--primary);
+  color: white;
   border: none;
   padding: 14px 36px;
   font-size: 1rem;
@@ -1153,7 +1276,7 @@ tr:hover {
   flex: 1 1 250px;
   max-width: 320px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #1A322F;
+  color: var(--bg-light);
     font-weight: bold;
 
 }
@@ -1172,7 +1295,7 @@ tr:hover {
 }
 
 .zubni-implatanti-blok > ol > li > ul > li {
-  color: #1A322F ;
+  color: var(--bg-light) ;
   font-size: 0.9rem;
   padding: 6px 12px 6px 28px;
   position: relative;
@@ -1182,7 +1305,7 @@ tr:hover {
   content: '→';
   position: absolute;
   left: 8px;
-  color: #1A322F;
+  color: var(--bg-light);
 }
 #zubne-fasete {
   padding: 60px 80px;
